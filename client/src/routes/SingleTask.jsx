@@ -17,7 +17,7 @@ const SingleTask = () => {
     setIsLoading(true);
     try {
       axios
-        .get(`http://localhost:8080/tasks/${id}`, {
+        .get(`https://task-management-app-mnqk.onrender.com/tasks/${id}`, {
           headers: { Authorization: token },
         })
         .then((res) => {

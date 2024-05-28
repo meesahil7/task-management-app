@@ -48,7 +48,7 @@ const Tasks = () => {
     setIsLoading(true);
     try {
       axios
-        .delete(`http://localhost:8080/tasks/${id}`, {
+        .delete(`https://task-management-app-mnqk.onrender.com/tasks/${id}`, {
           headers: { Authorization: token },
         })
         .then(() => {
@@ -84,7 +84,7 @@ const Tasks = () => {
     setIsLoading(true);
     try {
       axios
-        .get("http://localhost:8080/tasks", {
+        .get("https://task-management-app-mnqk.onrender.com/tasks", {
           headers: { Authorization: token },
         })
         .then((res) => {

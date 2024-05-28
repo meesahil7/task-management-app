@@ -33,7 +33,7 @@ const TaskForm = () => {
     setIsLoading(true);
     try {
       axios
-        .post(`http://localhost:8080/tasks`, task, {
+        .post(`https://task-management-app-mnqk.onrender.com/tasks`, task, {
           headers: { Authorization: token },
         })
         .then(() => {
@@ -75,9 +75,13 @@ const TaskForm = () => {
     setIsLoading(true);
     try {
       axios
-        .put(`http://localhost:8080/tasks/${id}`, task, {
-          headers: { Authorization: token },
-        })
+        .put(
+          `https://task-management-app-mnqk.onrender.com/tasks/${id}`,
+          task,
+          {
+            headers: { Authorization: token },
+          }
+        )
         .then(() => {
           messageApi.open({
             type: "success",
@@ -111,7 +115,7 @@ const TaskForm = () => {
     setIsLoading(true);
     try {
       axios
-        .get(`http://localhost:8080/tasks/${id}`, {
+        .get(`https://task-management-app-mnqk.onrender.com/tasks/${id}`, {
           headers: { Authorization: token },
         })
         .then((res) => {

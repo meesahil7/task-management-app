@@ -48,7 +48,10 @@ const Login = () => {
     setIsLoading(true);
     try {
       axios
-        .post("http://localhost:8080/auth/signup", value)
+        .post(
+          "https://task-management-app-mnqk.onrender.com/auth/signup",
+          value
+        )
         .then(() => {
           messageApi
             .open({
