@@ -31,7 +31,7 @@ function validatePassword(value) {
   return error;
 }
 
-const Login = () => {
+const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [passwordType, setPasswordType] = useState(true);
   const [messageApi, contextHolder] = message.useMessage();
@@ -149,4 +149,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
